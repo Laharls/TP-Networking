@@ -130,7 +130,7 @@ Mais avec l'image `nginx:alpine`, j'ai rencontré ces 2 erreurs :
 
 **Erreur** : `nginx: [emerg] no "events" section in configuration`
 
-### Solution
+### 💡 Solution
 
 L'image `nginx:alpine` nécessite **obligatoirement** les blocs `events {}` et `http {}` :
 
