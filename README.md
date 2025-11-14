@@ -1,5 +1,9 @@
 # Infrastructure Docker Multi-Réseaux
 
+## Accès Image Docker Hub
+
+[Docker Hub TP Networking](https://hub.docker.com/repository/docker/laharls/tp-networking/general)
+
 ## 📋 Description
 
 Infrastructure Docker avec 3 services sur 2 réseaux distincts :
@@ -172,6 +176,4 @@ J'ai ajouté aussi des `depends_on` pour assurer l'ordre de démarrage des conta
 
 Enfin, j'ai finaliser le fichier avec l'ajout des volumes pour assurer la persistance des données pour la base de donnée `db` et de la configuration de nginx.
 
-## Accès Image Docker Hub
 
-[Docker Hub TP Networking](https://hub.docker.com/repository/docker/laharls/tp-networking/general)
