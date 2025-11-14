@@ -76,11 +76,15 @@ http://localhost:8080
 ```
 Résultat : `Hello from app!`
 
+![Service running](./screenshots/accès_app.png)
+
 ### Test 2 : Connexion à la base
 ```bash
 http://localhost:8080/health
 ```
 Résultat : `{"db":"reachable","status":"ok"}`
+
+![Service running](./screenshots/accès_db.png)
 
 ## 🎁 Bonus
 
@@ -99,6 +103,8 @@ tp-networks-app-1     tp-networks-app  5000/tcp
 tp-networks-db-1      mariadb:latest   3306/tcp
 tp-networks-proxy-1   nginx:alpine     0.0.0.0:8080->80/tcp
 ```
+
+![Service running](./screenshots/services_running.png)
 
 **Analyse** :
 - ✅ `db` : `3306/tcp` → Pas de `0.0.0.0:3306`, donc **non accessible depuis l'hôte**
@@ -156,7 +162,7 @@ http {
 
 En ce qui concerne le Dockerfile, l'idée était donc de créer une image qui puisse contenir une application python, avec Flask et pymysql pour pouvoir interagir avec la base de donnée. 
 
-La première étape a donc été de me rendre sur le docker hub pour trouver une image python. Je suis parti sur l'image `python:3.14-slim`, qui est la dernière version stable en date a être sortie. 
+La première étape a donc été de me rendre sur le docker hub pour trouver une image python. Je suis parti sur l'image `python:3.14-slim`, qui est la dernière version python stable en date a être sortie. 
 
 ![Affiche les 2 dernières versions de python en date](image.png)
 
